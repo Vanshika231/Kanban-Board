@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Kanban</title>
+    <link rel="stylesheet" href="kbcss.css">
+</head>
+<body>
+    <header>
+        <h1>Simple Kanban Board</h1>
+        <p>Drag and drop tasks between columns</p>
+    </header>
+
+    <div class="board">
+        <div class="column todo" data-status="todo">
+            <div class="column-header">To Do</div>
+            <div class="tasks" id="todo"></div>
+            <button class="add-btn" onclick="showForm('todo')">+ Add Task</button>
+            <div class="task-form" id="todo-form">
+                <input type="text" placeholder="Task title" id="todo-title" required>
+                <textarea placeholder="Task description..." id="todo-desc"></textarea>
+                <div class="form-actions">
+                    <button class="cancel-btn" onclick="hideForm('todo')">Cancel</button>
+                    <button class="save-btn" onclick="addTask('todo')">Add Task</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="column doing" data-status="doing">
+            <div class="column-header">In Progress</div>
+            <div class="tasks" id="doing"></div>
+            <button class="add-btn" onclick="showForm('doing')">+ Add Task</button>
+            <div class="task-form" id="doing-form">
+                <input type="text" placeholder="Task title" id="doing-title" required>
+                <textarea placeholder="Task description..." id="doing-desc"></textarea>
+                <div class="form-actions">
+                    <button class="cancel-btn" onclick="hideForm('doing')">Cancel</button>
+                    <button class="save-btn" onclick="addTask('doing')">Add Task</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="column done" data-status="done">
+            <div class="column-header">Done</div>
+            <div class="tasks" id="done"></div>
+            <button class="add-btn" onclick="showForm('done')">+ Add Task</button>
+            <div class="task-form" id="done-form">
+                <input type="text" placeholder="Task title" id="done-title" required>
+                <textarea placeholder="Task description..." id="done-desc"></textarea>
+                <div class="form-actions">
+                    <button class="cancel-btn" onclick="hideForm('done')">Cancel</button>
+                    <button class="save-btn" onclick="addTask('done')">Add Task</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="kbjs.js"></script>
+    
+   
+</body>
+</html>
