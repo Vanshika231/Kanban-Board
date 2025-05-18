@@ -17,42 +17,42 @@
             <div class="column-header">To Do</div>
             <div class="tasks" id="todo"></div>
             <button class="add-btn" onclick="showForm('todo')">+ Add Task</button>
-            <div class="task-form" id="todo-form">
+            <form class="task-form" id="doing-form" onsubmit="submitForm(event, 'doing')" style="display:none;">
                 <input type="text" placeholder="Task title" id="todo-title" required>
                 <textarea placeholder="Task description..." id="todo-desc"></textarea>
                 <div class="form-actions">
                     <button class="cancel-btn" onclick="hideForm('todo')">Cancel</button>
                     <button class="save-btn" onclick="addTask('todo')">Add Task</button>
                 </div>
-            </div>
+            </form>
         </div>
 
         <div class="column doing" data-status="doing">
             <div class="column-header">In Progress</div>
             <div class="tasks" id="doing"></div>
             <button class="add-btn" onclick="showForm('doing')">+ Add Task</button>
-            <div class="task-form" id="doing-form">
+            <form class="task-form" id="doing-form" onsubmit="submitForm(event, 'doing')" style="display:none;">
                 <input type="text" placeholder="Task title" id="doing-title" required>
                 <textarea placeholder="Task description..." id="doing-desc"></textarea>
                 <div class="form-actions">
                     <button class="cancel-btn" onclick="hideForm('doing')">Cancel</button>
                     <button class="save-btn" onclick="addTask('doing')">Add Task</button>
                 </div>
-            </div>
+            </form>
         </div>
 
         <div class="column done" data-status="done">
             <div class="column-header">Done</div>
             <div class="tasks" id="done"></div>
             <button class="add-btn" onclick="showForm('done')">+ Add Task</button>
-            <div class="task-form" id="done-form">
+            <form class="task-form" id="doing-form" onsubmit="submitForm(event, 'doing')" style="display:none;">
                 <input type="text" placeholder="Task title" id="done-title" required>
                 <textarea placeholder="Task description..." id="done-desc"></textarea>
                 <div class="form-actions">
                     <button class="cancel-btn" onclick="hideForm('done')">Cancel</button>
                     <button class="save-btn" onclick="addTask('done')">Add Task</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 <script src="kbjs.js"></script>
